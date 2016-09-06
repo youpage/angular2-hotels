@@ -1,6 +1,6 @@
 # Angular 2 and TypeScript Hotels
 
-Quick sample 
+Quick sample RC6
 
 ## Running the Application
 
