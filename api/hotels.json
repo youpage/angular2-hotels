@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "hotel": "Hilton",
+    "city": "London",
+	"price": 100    
+  },
+  {
+    "id": 2,
+    "hotel": "Mara",
+    "city": "Prague",
+	"price": 120    
+  },
+  {
+    "id": 3,
+    "hotel": "Holiday Inn",
+    "city": "Miami",
+	"price": 99    
+  },
+  {
+    "id": 4,
+    "hotel": "High Palace",
+    "city": "Dubai",
+	"price": 200    
+  }
+]

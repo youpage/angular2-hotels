@@ -1,0 +1,40 @@
+<div class="jumbotron">
+    <h2>Hotels</h2>
+    <form>
+        <div class="form-group">
+            <label for="hotelName">Hotel Name: {{hotelName}}</label>
+            <input type="text" name="hotelName" placeholder="Hilton" class="form-control" [(ngModel)]="hotelName">
+        </div>
+        <div class="form-group">
+            <label for="city">City: {{city}}</label>
+            <input type="text" name="city" placeholder="London" class="form-control" [(ngModel)]="city">
+        </div>
+        <div>
+            <button [disabled]="hotelName == '' || city == ''" type="submit" class="btn btn-primary" (click)="addHotel()">Add Hotel</button>
+        </div>
+    </form>
+    <br>
+    <div>
+        <div class="alert alert-danger" role="alert" [class.hide]="!hotels_error">No data for hotels available</div>
+        <div *ngIf="!hotels_error" class="input-group">
+            <label for="price">Maximum Price</label>
+            <input (keyup)="onlyNumbers()" type="text" name="price" value="0" placeholder="0" class="form-control" [(ngModel)]="priceSearch">
+        </div>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Hotel</th>
+                <th>City</th>
+                <th>Price</th>
+            </tr>
+            <tr *ngFor="let hotel of hotels | priceFilter:priceSearch">
+                <td>{{hotel.id}}</td>
+                <td>{{hotel.hotel}}</td>
+                <td>{{hotel.city}}</td>
+                <td>{{hotel.price}}</td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <a routerLink="/">Back to Home</a>
+</div>
